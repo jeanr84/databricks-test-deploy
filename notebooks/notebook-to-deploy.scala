@@ -24,7 +24,5 @@ spark.conf.set("fs.adl.oauth2.refresh.url", dbutils.secrets.get(scope = "azure",
 
 // COMMAND ----------
 
+println("Ce print a été ajouté dans la version v2.0.0")
 spark.read.parquet(adlsPrefix + atomePath).count()
-
-// COMMAND ----------
-
