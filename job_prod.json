@@ -6,6 +6,9 @@
     "num_workers": 2
   },
   "notebook_task": {
-    "notebook_path": "/Users/robin.jean@external.totaldirectenergie.com/prod/databricks-test-deploy/v2.0.0/notebook-to-deploy"
+    "notebook_path": "/Users/robin.jean@external.totaldirectenergie.com/prod/databricks-test-deploy/v2.0.0/notebook-to-deploy",
+    "base_parameters": {
+      "env": "prod"
+    }
   }
 }
