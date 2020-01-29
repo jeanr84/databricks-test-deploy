@@ -1,11 +1,18 @@
 // Databricks notebook source
 // MAGIC %md
-// MAGIC #### Ajout d'un widget pour gérer l'environement + initialisation des variables selon l'environement
+// MAGIC #### Ajout d'un widget pour gérer l'environement
 
 // COMMAND ----------
 
 dbutils.widgets.dropdown("env", "dev", Array("dev", "prod"))
 val env = dbutils.widgets.get("env")
+
+// COMMAND ----------
+
+// MAGIC %md
+// MAGIC #### Initialisation des variables selon l'environement
+
+// COMMAND ----------
 
 var adlsPrefix: String = null
 var atomePath: String = null
@@ -24,5 +31,4 @@ spark.conf.set("fs.adl.oauth2.refresh.url", dbutils.secrets.get(scope = "azure",
 
 // COMMAND ----------
 
-println("Ce print a été ajouté dans la version v2.0.0")
 spark.read.parquet(adlsPrefix + atomePath).count()
