@@ -1,12 +1,12 @@
 {
-  "name": "databricks-test-deploy-prod",
+  "name": "databricks-test-deploy-<version>-prod",
   "new_cluster": {
     "spark_version": "6.2.x-scala2.11",
     "node_type_id": "Standard_F4s",
     "num_workers": 2
   },
   "notebook_task": {
-    "notebook_path": "/Users/robin.jean@external.totaldirectenergie.com/prod/databricks-test-deploy/v2.0.0/notebook-to-deploy",
+    "notebook_path": "/Users/robin.jean@external.totaldirectenergie.com/prod/databricks-test-deploy/<version>/notebook-to-deploy",
     "base_parameters": {
       "env": "prod"
     }
